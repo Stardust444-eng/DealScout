@@ -3,13 +3,106 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Deal Scout — Sale Calendar</title>
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Know when your brands go on sale. A free calendar of women's fashion and beauty sales across 127 US brands, with reminders. Every date shows its source.">
+<link rel="icon" href="app/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="app/icons/apple-touch-icon.png">
+<style>
+:root{--ink:#111;--paper:#fff;--dim:#666;--line:#e6e2dc;--red:#B3261E}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Inter",Helvetica,Arial,sans-serif}
+.serif{font-family:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--ink)}header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{letter-spacing:.32em;font-size:20px}
+nav a{color:var(--ink);text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-left:18px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:64px 0 48px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+h1{font-size:clamp(44px,7vw,84px);line-height:.95;margin:14px 0 18px;font-weight:400}
+h1 i{font-style:italic}
+.lede{font-size:18px;color:#333;max-width:34em}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 26px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}.btn.ghost{color:var(--ink)}
+.phone{border:1px solid var(--ink);border-radius:36px;aspect-ratio:9/19;overflow:hidden;max-width:300px;justify-self:center;width:100%;background:#000}
+.phone iframe{width:100%;height:100%;border:0;background:#fff}
+section.feed{border-top:1px solid var(--ink);padding:40px 0}
+.feed h2,.how h2{font-size:40px;font-weight:400;margin:6px 0 18px}
+.list{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:90px 1fr auto;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
+.days{font-size:34px;line-height:1}.days small{display:block;font-family:inherit;font-size:10px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+.t{font-size:22px}.meta{font-size:13px;color:var(--dim)}
+.tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--ink)}
+.tag.new{background:var(--red);border-color:var(--red);color:#fff;margin-right:8px}
+.src{font-size:12px;color:var(--dim)}.src a{color:var(--dim)}
+.how{border-top:1px solid var(--ink);padding:40px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.grid h3{font-size:24px;font-weight:400;margin:0 0 6px}.grid p{margin:0;color:#333}
+footer{border-top:1px solid var(--ink);padding:28px 0 48px;font-size:13px;color:var(--dim)}
+footer a{color:var(--dim);margin-right:16px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.phone{max-width:260px}.grid{grid-template-columns:1fr}.row{grid-template-columns:64px 1fr}.row .tag{grid-column:2}}
+</style>
 </head>
 <body>
-<header><h1>Deal Scout</h1><p>When your brands go on sale</p></header>
-<main>
-<p>One calendar of the sales that matter for women’s fashion and beauty, with reminders 3 days before, the day before and the morning each sale starts. Free, no account, no ads, no tracking.</p>
+<header><div class="wrap"><span class="logo serif">DEAL SCOUT</span><nav><a href="app/">Open app</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></div></header>
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">127 brands · free, always</p>
+      <h1 class="serif">Know <i>when</i> your brands go on sale.</h1>
+      <p class="lede">One calendar of women's fashion and beauty sales, from Target and Walmart to Sephora, lululemon and Aritzia. Follow your brands, get a reminder before each sale, and see where every date comes from.</p>
+      <div class="cta">
+        <a class="btn primary" href="app/">Open Deal Scout</a>
+        <span class="btn ghost" aria-disabled="true">iPhone app: in App Review</span>
+      </div>
+    </div>
+    <div class="phone" aria-label="Live preview of the Deal Scout app"><iframe src="app/" title="Deal Scout app preview" loading="lazy"></iframe></div>
+  </div>
+
+  <section class="feed" aria-labelledby="latest">
+    <p class="eyebrow">Live · updated as retailers announce</p>
+    <h2 id="latest" class="serif">Just announced</h2>
+    <div class="list" id="list"><p class="meta" style="padding:16px 0">Loading the latest sales…</p></div>
+    <p class="src">Dates come from each retailer's announcement as reported by the linked source. Check the retailer before you shop.</p>
+  </section>
+
+  <section class="how" aria-labelledby="how">
+    <p class="eyebrow">How it works</p>
+    <h2 id="how" class="serif">Never pay full price <i>a week too early.</i></h2>
+    <div class="grid">
+      <div><h3 class="serif">Follow your brands</h3><p>Pick from 127 US chains. Can't find one? Suggest it from the app.</p></div>
+      <div><h3 class="serif">Get reminded</h3><p>A week, 3 days, 2 days, the day before or the morning it starts. Your choice, never overnight.</p></div>
+      <div><h3 class="serif">See the source</h3><p>"Announced" means the retailer published the dates. "Expected" means last year's dates; we say so.</p></div>
+    </div>
+  </section>
 </main>
-<nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+<footer><div class="wrap"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:appsupport47@gmail.com?subject=Deal%20Scout%3A%20list%20our%20brand">Brands: list your sales</a><br><br>Deal Scout is independent and not affiliated with the retailers listed. No account, no ads, no tracking.</div></footer>
+<script>
+(async () => {
+  const list = document.getElementById("list");
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const fmt = (d) => d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  try {
+    const feed = await (await fetch("feed/sales.json", { cache: "no-store" })).json();
+    const now = new Date(); now.setHours(0, 0, 0, 0);
+    const rows = feed.events.filter((e) => e.dateRule && e.dateRule.kind === "explicitOnce").map((e) => {
+      const r = e.dateRule;
+      const start = new Date(r.year, r.startMonth - 1, r.startDay), end = new Date(r.year + (r.endMonth < r.startMonth ? 1 : 0), r.endMonth - 1, r.endDay);
+      return { e, start, end };
+    }).filter((x) => x.end >= now).sort((a, b) => a.start - b.start);
+    if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:16px 0">No newly announced sales right now. Check back soon.</p>'; return; }
+    const fresh = Date.now() - 7 * 864e5;
+    list.innerHTML = rows.map(({ e, start, end }) => {
+      const days = Math.round((start - now) / 864e5);
+      const big = days <= 0 ? "Now" : days;
+      const unit = days <= 0 ? "on" : days === 1 ? "day" : "days";
+      const isNew = Date.parse(e.checkedOn) >= fresh;
+      return `<div class="row"><span class="days serif">${big}<small>${unit}</small></span>
+        <span><span class="t serif">${isNew ? '<span class="tag new">New</span>' : ""}${esc(e.title)}</span><br>
+        <span class="meta">${fmt(start)} – ${fmt(end)} · ${e.confidence === "announced" ? "Announced" : "Expected"}${e.earlyAccess ? " · " + esc(e.earlyAccess) : ""}</span><br>
+        <span class="src">Source: <a href="${esc(e.source.url)}" rel="noopener">${esc(e.source.label)}</a></span></span>
+        <a class="tag" href="app/">Remind me</a></div>`;
+    }).join("");
+  } catch { list.innerHTML = '<p class="meta" style="padding:16px 0">Couldn\'t load the latest sales. <a href="app/">Open the app</a>.</p>'; }
+})();
+</script>
 </body>
 </html>
