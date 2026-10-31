@@ -1,6 +1,51 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T09:00:00Z",
-  "events": [],
+  "generatedAt": "2026-10-31T15:30:00Z",
+  "events": [
+    {
+      "id": "ev-target-early-bf-2026", "retailerID": "target", "title": "Target Early Black Friday Sale",
+      "dateRule": { "kind": "explicitOnce", "year": 2026, "startMonth": 11, "startDay": 5, "endMonth": 11, "endDay": 7 },
+      "discountLabel": null,
+      "affectedCategoryIDs": ["womens.clothing", "womens.shoes", "womens.accessories", "beauty"],
+      "channel": "both", "confidence": "announced",
+      "basis": "Announced by Target (reported by TODAY, Oct 26 2026): a three-day Early Black Friday Sale, Nov 5–7, then new limited-time offers every weekend. Sale-wide discount not stated. One outlet (9to5Toys) reported Dec 7 as the end; two TODAY reports say Nov 7, used here.",
+      "earlyAccess": null,
+      "source": { "label": "TODAY · Target is kicking off Black Friday early", "url": "https://www.today.com/shop/target-announces-black-friday-sale-details-2026-rcna604432" },
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "ev-walmart-early-bf-2026", "retailerID": "walmart", "title": "Walmart Early Black Friday Deals",
+      "dateRule": { "kind": "explicitOnce", "year": 2026, "startMonth": 11, "startDay": 12, "endMonth": 11, "endDay": 15 },
+      "discountLabel": null,
+      "affectedCategoryIDs": ["womens.clothing", "womens.shoes", "womens.accessories", "beauty"],
+      "channel": "both", "confidence": "announced",
+      "basis": "Announced by Walmart (reported Oct 29 2026): Early Black Friday Deals Nov 12–15, online from 12:01 a.m. ET and in stores from 6 a.m. local. Sale-wide discount not stated.",
+      "earlyAccess": "Walmart+ members: early access to hot Deal drops from 12:01 a.m. ET Nov 12; everyone else from Nov 13.",
+      "source": { "label": "9to5Toys · Walmart announces 2026 Black Friday sale", "url": "https://9to5toys.com/2026/10/29/walmart-announces-2026-black-friday-sale/" },
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "ev-walmart-bf-2026", "retailerID": "walmart", "title": "Walmart Black Friday Deals",
+      "dateRule": { "kind": "explicitOnce", "year": 2026, "startMonth": 11, "startDay": 23, "endMonth": 11, "endDay": 29 },
+      "discountLabel": null,
+      "affectedCategoryIDs": ["womens.clothing", "womens.shoes", "womens.accessories", "beauty"],
+      "channel": "both", "confidence": "announced",
+      "basis": "Announced by Walmart (reported Oct 29 2026): Black Friday Deals Nov 23–29 online from 12:01 a.m. ET; in stores Nov 27 from 6 a.m. local. Sale-wide discount not stated.",
+      "earlyAccess": "Walmart+ members: early access from 12:01 a.m. ET Nov 23; everyone else from Nov 24.",
+      "source": { "label": "9to5Toys · Walmart announces 2026 Black Friday sale", "url": "https://9to5toys.com/2026/10/29/walmart-announces-2026-black-friday-sale/" },
+      "checkedOn": "2026-10-31"
+    },
+    {
+      "id": "ev-walmart-cyber-2026", "retailerID": "walmart", "title": "Walmart Cyber Monday Deals",
+      "dateRule": { "kind": "explicitOnce", "year": 2026, "startMonth": 11, "startDay": 30, "endMonth": 12, "endDay": 2 },
+      "discountLabel": null,
+      "affectedCategoryIDs": ["womens.clothing", "womens.shoes", "womens.accessories", "beauty"],
+      "channel": "online", "confidence": "announced",
+      "basis": "Announced by Walmart (reported Oct 29 2026): Cyber Monday Deals online Nov 30, 12:01 a.m. ET, through Dec 2. Sale-wide discount not stated.",
+      "earlyAccess": null,
+      "source": { "label": "9to5Toys · Walmart announces 2026 Black Friday sale", "url": "https://9to5toys.com/2026/10/29/walmart-announces-2026-black-friday-sale/" },
+      "checkedOn": "2026-10-31"
+    }
+  ],
   "withdrawnIDs": []
 }
